@@ -35,12 +35,13 @@ env
 当然，你的脚本命令名字可能并不叫start，test，build等，这个无所谓，根据实际情况调整即可
 ```
    
-1. 在你项目代码中引用：
+4. 在你项目代码中引用：
 ```js
 import object from '../../../env/index.js';
 console.log("========object======",object)
 ```
 ![3](/assets/3.png)
+
 5. 启动项目
      npm run ...
 
