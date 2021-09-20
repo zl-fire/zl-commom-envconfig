@@ -13,7 +13,7 @@ else if (param === "-v") {
 else if(param === "create"){
     zl_nodefs.copycutFiledir({
         inputFileUrl: path.join(__dirname,"./env"),
-        outFileUrl: path.resolve("."),
+        outFileUrl: path.join(path.resolve("."),"./env"),
         copyOrCut: "copy",
         showExeResult:false,
         rewrite:false
