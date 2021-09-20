@@ -1,6 +1,6 @@
 {
   "name": "zl-commom-envconfig",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个为Node/React/vue/Angular等各js框架项目开发的通用环境配置模块，内置默认/开发/测试/线上四套环境配置，且还可以自己无限递加新的环境配置（只有是js项目，不管是前端js还是后端的nodejs,都可以通用此模块作为通用的多套环境配置解决方案）",
   "main": "index.js",
   "scripts": {
