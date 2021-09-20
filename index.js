@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-let gitcktSpecdir = require("zl-gitckt-specdir");
+// let gitcktSpecdir = require("zl-gitckt-specdir");
+let path=require("path");
+const zl_nodefs = require("zl-nodefs");
 let param = process.argv[2];//获取用户输入的参数
 //显示帮助命令
 if (param === "-help") {
@@ -8,11 +10,16 @@ if (param === "-help") {
 else if (param === "-v") {
     console.log("当前版本为:", require('../package.json').version);
 }
+else if(param === "create"){
+    zl_nodefs.copycutFiledir({
+        inputFileUrl: path.join(__dirname,"./env"),
+        outFileUrl: path.resolve("."),
+        copyOrCut: "copy",
+        showExeResult:false,
+        rewrite:false
+    });
+    console.log("======成功创建env配置文件夹======");
+}
 else {
-    // 从如下gitUrl地址拉取项目目录indexDB-demo,目录保存位置为saveDir，默认为当前命令执行时所在目录
-    gitcktSpecdir({
-        gitUrl: 'https://github.com/zl-fire/zl-commom-envconfig',
-        dirName: 'env',
-        saveDir: "./aa"
-    })
+    console.log("创建通用环境配置文件命令为：zl-env create");
 }
