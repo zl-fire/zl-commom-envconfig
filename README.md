@@ -19,17 +19,23 @@ env
 └── setEnv.js
 ```
 
-3. 在你项目的package.json文件中配置脚本命令(package.json 和 生成的env文件夹需要在同一个目录，当然1，2步执行无误的话，默认应该就是)
+3. 在你项目的package.json文件中配置脚本命令，即加上命令： node ./env/setEnv.js 环境名
+```js
+如：
+   node ./env/setEnv.js dev
+   node ./env/setEnv.js test
+   node ./env/setEnv.js prod
+```
 
 ```js
-类似如下：
+实际使用类似如下：
     "start": "node ./env/setEnv.js dev && roadhog server",
     "test": "node  ./env/setEnv.js test && roadhog server",
     "build": "node ./env/setEnv.js prod && roadhog build",
 当然，你的脚本命令名字可能并不叫start，test，build等，这个无所谓，根据实际情况调整即可
 ```
    
-4. 在你项目代码中引用：
+1. 在你项目代码中引用：
 ```js
 import object from '../../../env/index.js';
 console.log("========object======",object)
