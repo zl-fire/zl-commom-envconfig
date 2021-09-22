@@ -18,8 +18,7 @@ else if(param === "create"){
         showExeResult:false,
         rewrite:false
     });
-    console.log("======成功创建env配置文件夹======");
-}
+ }
 else {
     console.log("创建通用环境配置文件命令为：zl-env create");
 }
